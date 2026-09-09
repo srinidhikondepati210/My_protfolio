@@ -1,0 +1,245 @@
+/* =========================
+   1. COLORS / VARIABLES
+   ========================= */
+
+:root {
+    --brand: #2563eb;
+    --brand-dark: #1d4ed8;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+
+    --background: #f5f7fb;
+    --white: #ffffff;
+    --border: #e5e7eb;
+}
+
+
+/* =========================
+   2. BASE
+   ========================= */
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    color: var(--text);
+    background-color: var(--background);
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   3. HEADER
+   ========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background-color: black;
+    color: white;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* Image + Name */
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-right: 15px;
+
+    border: 3px solid var(--brand);
+}
+
+.profile h1 {
+    margin: 0;
+    color: white;
+}
+
+
+/* =========================
+   4. NAVIGATION
+   ========================= */
+
+nav ul {
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--brand);
+}
+
+
+/* =========================
+   5. MAIN
+   ========================= */
+
+main {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+
+    flex: 1;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    color: var(--brand);
+
+    margin-bottom: 10px;
+}
+
+section p {
+    color: var(--muted);
+}
+
+
+/* =========================
+   6. PROJECTS
+   ========================= */
+
+#projects ul {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+#projects li {
+    padding: 25px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+#projects li:hover {
+    border-color: var(--brand);
+
+    transform: translateY(-3px);
+}
+
+#projects a {
+    color: var(--brand);
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+#projects a:hover {
+    color: var(--brand-dark);
+}
+
+
+/* =========================
+   7. FOOTER
+   ========================= */
+
+footer {
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background-color: var(--text);
+}
+
+footer p {
+    margin: 0;
+
+    color: var(--white);
+}
+
+footer a {
+    color: var(--white);
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--brand);
+}
+
+
+/* =========================
+   8. TABLET
+   ========================= */
+
+@media (min-width: 700px) {
+
+    #projects ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   9. DESKTOP
+   ========================= */
+
+@media (min-width: 1000px) {
+
+    #projects ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================
+   10. RESPONSIVE IMAGE
+   ========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
